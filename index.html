@@ -1,951 +1,777 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="& Plus Salon - Premium hair salon in New York City. Trendy haircuts, bleaching, perms, and expert styling. Rated 4.4 stars with 141 reviews. Visit us at 152 Allen St, New York, NY 10002.">
-    <meta name="keywords" content="hair salon, NYC salon, trendy haircuts, bleaching, perm, hair stylist, & Plus salon, Allen Street salon">
-    <meta name="author" content="& Plus Salon">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="& Plus Salon - Premium Hair Salon in NYC">
-    <meta property="og:description" content="Trendy haircuts, expert stylists, and premium hair services in the heart of New York City.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.plus-salon.com">
-    <meta property="og:image" content="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHEECdhNSRjZeTFKEeb99IDGhPJt6mzOY0YB-rLdtfcKPhv5D-3cQZbT53CroneJ1h-5NR_9Q92CQ9dNuiEKDfLE2lOnHkk8LEm0J3kh8dBvk8Sem8YWdxnIl5nswHjjvooZcYG=s515-k-no">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="& Plus Salon - Premium Hair Salon in NYC">
-    <meta name="twitter:description" content="Trendy haircuts, expert stylists, and premium hair services in NYC.">
-
-    <title>& Plus Salon | Premium Hair Salon in New York City</title>
-
-    <!-- Favicon (inline SVG) -->
-    <link rel="icon" type="image/svg+xml" href="image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23d4af37;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23f4e4ba;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='48' fill='%231a1a2e'/%3E%3Ctext x='50' y='68' font-family='Georgia, serif' font-size='55' font-weight='bold' fill='url(%23grad)' text-anchor='middle'%3E%26%3C/text%3E%3Ctext x='72' y='55' font-family='Arial, sans-serif' font-size='28' font-weight='bold' fill='%23d4af37'%3E+%3C/text%3E%3C/svg%3E">
-
+    <title>لعبة الجواهر - Match 3</title>
     <style>
-        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        :root {
-            --primary-gold: #d4af37;
-            --secondary-gold: #f4e4ba;
-            --dark-bg: #1a1a2e;
-            --darker-bg: #0f0f1a;
-            --light-text: #ffffff;
-            --gray-text: #b0b0b0;
-            --accent-pink: #e8a598;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        
         body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--light-text);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Logo Styles */
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            text-decoration: none;
-        }
-
-        .logo-symbol {
-            font-family: 'Georgia', serif;
-            font-size: 2.5rem;
-            font-weight: bold;
-            background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .logo-plus {
-            font-family: 'Arial', sans-serif;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-gold);
-        }
-
-        .logo-text {
-            font-family: 'Arial', sans-serif;
-            font-size: 1.2rem;
-            color: var(--light-text);
-            margin-left: 5px;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(26, 26, 46, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--light-text);
-            text-decoration: none;
-            transition: color 0.3s ease;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-gold);
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)),
-                        url('https://lh3.googleusercontent.com/gps-cs-s/APNQkAHEECdhNSRjZeTFKEeb99IDGhPJt6mzOY0YB-rLdtfcKPhv5D-3cQZbT53CroneJ1h-5NR_9Q92CQ9dNuiEKDfLE2lOnHkk8LEm0J3kh8dBvk8Sem8YWdxnIl5nswHjjvooZcYG=s515-k-no');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
             overflow: hidden;
         }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(26, 26, 46, 0.8) 100%);
-            animation: pulse 4s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 0.8; }
-            50% { opacity: 1; }
-        }
-
-        .hero-content {
+        
+        #game-container {
             position: relative;
-            z-index: 1;
-            animation: fadeInUp 1.5s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            color: var(--gray-text);
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
-            color: var(--dark-bg);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
-        }
-
-        /* Sections */
-        section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* About Section */
-        .about {
-            background: var(--darker-bg);
-            border-radius: 20px;
-            margin: 3rem auto;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .about-text h3 {
-            color: var(--primary-gold);
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
-        }
-
-        .about-text p {
-            color: var(--gray-text);
-            margin-bottom: 1.5rem;
-        }
-
-        .rating-stars {
-            color: var(--primary-gold);
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .rating-number {
-            font-size: 1.2rem;
-            color: var(--light-text);
-        }
-
-        /* Services Section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: var(--darker-bg);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(212, 175, 55, 0.1);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .service-card h3 {
-            color: var(--primary-gold);
-            margin-bottom: 1rem;
-        }
-
-        .service-card p {
-            color: var(--gray-text);
-        }
-
-        /* Gallery Section */
-        .gallery {
-            background: var(--darker-bg);
-            border-radius: 20px;
-            margin: 3rem auto;
-        }
-
-        .gallery-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .tab-button {
-            padding: 0.8rem 2rem;
-            background: transparent;
-            border: 2px solid var(--primary-gold);
-            color: var(--light-text);
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-        }
-
-        .tab-button.active,
-        .tab-button:hover {
-            background: var(--primary-gold);
-            color: var(--dark-bg);
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        .gallery-item {
-            position: relative;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
             overflow: hidden;
-            border-radius: 10px;
-            cursor: pointer;
-            aspect-ratio: 1;
         }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-item.video::after {
-            content: '▶';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 3rem;
-            color: white;
-            text-shadow: 0 0 10px rgba(0,0,0,0.5);
-        }
-
-        /* Info Section */
-        .info-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .info-card {
-            background: var(--darker-bg);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid rgba(212, 175, 55, 0.1);
-        }
-
-        .info-card h3 {
-            color: var(--primary-gold);
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .info-icon {
-            color: var(--primary-gold);
-            font-size: 1.2rem;
-        }
-
-        .hours-table {
-            width: 100%;
-        }
-
-        .hours-table tr {
-            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
-        }
-
-        .hours-table td {
-            padding: 0.5rem 0;
-            color: var(--gray-text);
-        }
-
-        .hours-table td:first-child {
-            font-weight: 500;
-        }
-
-        /* Reviews Section */
-        .reviews-summary {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .review-keyword {
-            background: rgba(212, 175, 55, 0.1);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            text-align: center;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-        }
-
-        .review-keyword span {
-            color: var(--primary-gold);
-            font-weight: bold;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: var(--darker-bg);
-            border-radius: 20px;
-            margin: 3rem auto;
-        }
-
-        .contact-links {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .contact-link {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            color: var(--light-text);
-            text-decoration: none;
-            padding: 1rem;
-            background: rgba(212, 175, 55, 0.05);
-            border-radius: 10px;
-            transition: background 0.3s ease;
-        }
-
-        .contact-link:hover {
-            background: rgba(212, 175, 55, 0.1);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--darker-bg);
-            padding: 3rem 2rem;
-            text-align: center;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
-        }
-
-        .footer-logo {
-            margin-bottom: 1rem;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin: 1.5rem 0;
-        }
-
-        .social-links a {
-            color: var(--primary-gold);
-            font-size: 1.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .social-links a:hover {
-            transform: scale(1.2);
-        }
-
-        footer p {
-            color: var(--gray-text);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-
-        /* Animations on scroll */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+        
+        canvas {
+            display: block;
         }
     </style>
 </head>
 <body>
-    <!-- Schema Markup for Local Business -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "HairSalon",
-        "name": "& Plus Salon",
-        "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHEECdhNSRjZeTFKEeb99IDGhPJt6mzOY0YB-rLdtfcKPhv5D-3cQZbT53CroneJ1h-5NR_9Q92CQ9dNuiEKDfLE2lOnHkk8LEm0J3kh8dBvk8Sem8YWdxnIl5nswHjjvooZcYG=s515-k-no",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "152 Allen St",
-            "addressLocality": "New York",
-            "addressRegion": "NY",
-            "postalCode": "10002",
-            "addressCountry": "US"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 40.7209,
-            "longitude": -73.9897
-        },
-        "telephone": "+1-212-777-7718",
-        "url": "https://www.plus-salon.com",
-        "sameAs": [
-            "https://www.instagram.com/plus_salon"
-        ],
-        "openingHoursSpecification": [
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-                "opens": "11:00",
-                "closes": "20:00"
-            }
-        ],
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.4",
-            "reviewCount": "141",
-            "bestRating": "5",
-            "worstRating": "1"
-        },
-        "priceRange": "$$",
-        "paymentAccepted": "Cash",
-        "description": "Premium hair salon in New York City offering trendy haircuts, bleaching, perms, and expert styling services."
-    }
-    </script>
-
-    <!-- Navigation -->
-    <nav>
-        <a href="#" class="logo">
-            <span class="logo-symbol">&</span>
-            <span class="logo-plus">+</span>
-            <span class="logo-text">Plus</span>
-        </a>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>& Plus Salon</h1>
-            <p>Premium Hair Styling in the Heart of NYC</p>
-            <a href="#contact" class="cta-button">Book Your Appointment</a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about fade-in" id="about">
-        <h2 class="section-title">Welcome to & Plus</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <h3>Your Style, Our Passion</h3>
-                <p>At & Plus Salon, we believe every client deserves personalized attention and expert care. Our talented stylists specialize in trendy haircuts, precision bleaching, beautiful perms, and transformative styling.</p>
-                <p>Located in the vibrant Lower East Side of Manhattan, we've been serving New York's diverse community with dedication and creativity.</p>
-                <div class="rating-stars">★★★★☆</div>
-                <p class="rating-number">4.4 out of 5 stars based on 141 reviews</p>
-            </div>
-            <div class="about-image">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHfDdQ-WBX032zyv591nkmhlEk86DHDNf4igRpcQl6Ps0A3UwxRlfMV5KJ8Jgf_fHcrZ9CCu1ZksFpFFYB1FZAScjEib7GvQKTD60P5LYCt80_2h9aj-G0apqnwHNnYVvQyVVNS=s406-k-no" alt="& Plus Salon Interior" style="width: 100%; border-radius: 15px;">
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services fade-in" id="services">
-        <h2 class="section-title">Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">✂️</div>
-                <h3>Trendy Haircuts</h3>
-                <p>Modern cuts tailored to your face shape and lifestyle</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">✨</div>
-                <h3>Bleaching</h3>
-                <p>Professional lightening services for stunning blonde looks</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">💇</div>
-                <h3>Perms</h3>
-                <p>Beautiful curls and waves that last</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🎨</div>
-                <h3>Coloring</h3>
-                <p>Vibrant colors and subtle highlights</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🌟</div>
-                <h3>Styling</h3>
-                <p>Expert styling for any occasion</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">💆</div>
-                <h3>Hair Care</h3>
-                <p>Treatments for healthy, beautiful hair</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="gallery fade-in" id="gallery">
-        <h2 class="section-title">Photos of & Plus Salon</h2>
-        <div class="gallery-tabs">
-            <button class="tab-button active" onclick="showGallery('inside')">Inside</button>
-            <button class="tab-button" onclick="showGallery('owner')">By Owner</button>
-            <button class="tab-button" onclick="showGallery('all')">All Photos</button>
-        </div>
-
-        <div class="gallery-grid" id="gallery-inside">
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFQS7nbA1uioIjx9BYcQDDrveeUjPy1lMTa_Zv8qU-ruoXM0jZKXgmmOtvlWwA9fDyWK_IWcmFBidpGoJ0r3zZq66ho28B2Fd0L637Me8ZWhTUaIrvJbVUR_nGUUmCAxmHv8mOwmA=s508-k-no" alt="Salon Interior Photo 1" loading="lazy">
-            </div>
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFbtIS1gq6XrQQE0rVwf2rnmJ2xNdJmHBD2ryca_okVP7mPtH9GEXBG668nrbRHHkJqnkEpj6m48EZjjVwNk3lpjFxgZPCWXWxGnZ_UkgWPa4-csdlTbDp8y3jfvo4LcWnCB5d_=s406-k-no" alt="Salon Interior Photo 2" loading="lazy">
-            </div>
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGQEFzcUHqZ8AaWwwlyB66QBQ9fVzVJsRRRTDp-xwHdraLouE2q2LIXu_n7xBsn34LYRaNDUZrMYEPx0Or5G_8UsLF9EyGJlnPviXKr4g3LTYAtFXodmpRFOsmOL5Vtl4QoPf6pHA=s677-k-no" alt="Salon Interior Photo 3" loading="lazy">
-            </div>
-        </div>
-
-        <div class="gallery-grid" id="gallery-owner" style="display: none;">
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHEECdhNSRjZeTFKEeb99IDGhPJt6mzOY0YB-rLdtfcKPhv5D-3cQZbT53CroneJ1h-5NR_9Q92CQ9dNuiEKDfLE2lOnHkk8LEm0J3kh8dBvk8Sem8YWdxnIl5nswHjjvooZcYG=s515-k-no" alt="Salon Photo by Owner 1" loading="lazy">
-            </div>
-            <div class="gallery-item video">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFU7eeNUGl_8YXp1Q3SpbUMRX4G-dluZ1hUl0QBi_rX5YZdOLfpYbmHf824Ag8xu729u1b8UgOqCsZr6H0u09Yff3SgFXTbln3-DJd6-xaht15whOPfO13wy83kaBp89-bFcJsr=w203-h360-k-no" alt="Salon Video Thumbnail" loading="lazy">
-            </div>
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHfDdQ-WBX032zyv591nkmhlEk86DHDNf4igRpcQl6Ps0A3UwxRlfMV5KJ8Jgf_fHcrZ9CCu1ZksFpFFYB1FZAScjEib7GvQKTD60P5LYCt80_2h9aj-G0apqnwHNnYVvQyVVNS=s406-k-no" alt="Salon Photo by Owner 3" loading="lazy">
-            </div>
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFb9L-6-SAAbpo97JXuDvA_KkgeXZNUDb3TwKmX7h8WFhKH2AqyBr9slS8zUhx8u_I4ByLWAvkHjix_OB7dUcJHW19mQi99pLLmewVwWlDaA23wJuxS1M24ENZngUejAYEQ2w=s677-k-no" alt="Salon Photo by Owner 4" loading="lazy">
-            </div>
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHH8HDgKMntU7Kl2ctYEMVHnb_bshiZENGcaYtGweSbmmjOXnbOi-_7oNQY9p50ere3xDKa7HqTYAUadZWUOqiGTIOJus3_DXuM8V8TLK6-48dEnxu-zOO3f20mhtsZGPFuN9VhLQ=s508-k-no" alt="Salon Photo by Owner 5" loading="lazy">
-            </div>
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGGbwFOraxNfJzZk--rQjB6_aRCuWBQtxAaGs8KXCC9dWkevXlOlEGgdEGOe24D15lMkWuYoIjSkDZXsLOt6tewqPbe79hn9tjX793f59dajwq3gk1DIOu7ix5UWHrVO9vMU3FIhA=s677-k-no" alt="Salon Photo by Owner 6" loading="lazy">
-            </div>
-        </div>
-
-        <div class="gallery-grid" id="gallery-all" style="display: none;">
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHH8HDgKMntU7Kl2ctYEMVHnb_bshiZENGcaYtGweSbmmjOXnbOi-_7oNQY9p50ere3xDKa7HqTYAUadZWUOqiGTIOJus3_DXuM8V8TLK6-48dEnxu-zOO3f20mhtsZGPFuN9VhLQ=s508-k-no" alt="Gallery Photo 1" loading="lazy">
-            </div>
-            <div class="gallery-item video">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAERhU2PVaTi7Y5Vx_dCj8U4XNdx80mE6iJ717aHnTH2M4m2zrOiyH5Ym1uIBBimN0L1yzOa6JhHLZw6R3bPtp9azSncaTusYse7IygtcUqU6jMvyQDbzC09W9hOMlG4QLk-DhM=w203-h253-k-no" alt="Gallery Video Thumbnail" loading="lazy">
-            </div>
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGJCl7tH7-uTdzCMh7u_yGcjdWQQDpaxM9H43OYTI5xOvTlZA2Cgtw6RDJz2WK0dw_lcekqeH0weAgWDX9aTDaIh3PiQKijafW0fpeKOZ2QGJ6evGDG01-HGPu3cF-h2dyiL8YcNQ=s677-k-no" alt="Gallery Photo 3" loading="lazy">
-            </div>
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAEEyX_E8QqjVHVKGlmil4IDXR06Dx8IJaOKYJeXuoAr8a3EJpWebfzpTHzOMaO82h7p0GMTxjVFMGXLgGy6l9GifnBQ9MUrXcecRbP2ykGy5FAZUwBTO2V6POExBXISeBsynMfs=s677-k-no" alt="Gallery Photo 4" loading="lazy">
-            </div>
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAG5jmdbzUN4n1WfcdZ8p249rqWlq0tYkAIXkC4hkbaGCnnL_Q2xvtsnnCLy7QTxmuVKtwBqdCWaWlAuicbS3R_XgZ9AOqyPp52biYnEIdSWBGjYs6iC9lyW-ggoatFyAGelhyg=s677-k-no" alt="Gallery Photo 5" loading="lazy">
-            </div>
-            <div class="gallery-item">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAF6OAsQ2DHnq74DkGIWkgWLInHROGoTyEj-8thZaWAGrhz27_Oz4CHisNegaM3_1ut1T9-uGgliVeyAstIy1zgwWhk15ziq13SqB6Og_h8d4X9vs6hsy2iRrJ5ExurEy25Ej7-_xg=s677-k-no" alt="Gallery Photo 6" loading="lazy">
-            </div>
-        </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section class="reviews fade-in" id="reviews">
-        <h2 class="section-title">What Our Clients Say</h2>
-        <div class="about-content">
-            <div>
-                <div class="rating-stars" style="font-size: 3rem;">★★★★☆</div>
-                <p style="font-size: 2rem; color: var(--light-text); margin: 1rem 0;">4.4</p>
-                <p style="color: var(--gray-text);">Based on 141 Google Reviews</p>
-
-                <div style="margin-top: 2rem;">
-                    <p style="color: var(--gray-text); margin-bottom: 1rem;"><strong>Rating Breakdown:</strong></p>
-                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-                        <span style="color: var(--primary-gold);">★★★★★</span>
-                        <span style="color: var(--gray-text);">106 reviews</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-                        <span style="color: var(--primary-gold);">★★★★☆</span>
-                        <span style="color: var(--gray-text);">16 reviews</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-                        <span style="color: var(--primary-gold);">★★★☆☆</span>
-                        <span style="color: var(--gray-text);">3 reviews</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-                        <span style="color: var(--primary-gold);">★★☆☆☆</span>
-                        <span style="color: var(--gray-text);">5 reviews</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <span style="color: var(--primary-gold);">★☆☆☆☆</span>
-                        <span style="color: var(--gray-text);">11 reviews</span>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <h3 style="color: var(--primary-gold); margin-bottom: 1.5rem;">Review Highlights</h3>
-                <div class="reviews-summary">
-                    <div class="review-keyword"><span>friendly staff</span> (12)</div>
-                    <div class="review-keyword"><span>cash only</span> (11)</div>
-                    <div class="review-keyword"><span>perm</span> (5)</div>
-                    <div class="review-keyword"><span>long appointment</span> (4)</div>
-                    <div class="review-keyword"><span>kind stylist</span> (4)</div>
-                    <div class="review-keyword"><span>attention to detail</span> (4)</div>
-                    <div class="review-keyword"><span>talented stylist</span> (3)</div>
-                    <div class="review-keyword"><span>trendy haircuts</span> (3)</div>
-                    <div class="review-keyword"><span>black hair</span> (2)</div>
-                    <div class="review-keyword"><span>bleaching</span> (2)</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact & Info Section -->
-    <section class="contact fade-in" id="contact">
-        <h2 class="section-title">Visit Us</h2>
-        <div class="info-section">
-            <div class="info-card">
-                <h3>Contact Information</h3>
-                <div class="contact-links">
-                    <div class="info-item">
-                        <span class="info-icon">📍</span>
-                        <div>
-                            <strong>Address:</strong><br>
-                            <span style="color: var(--gray-text);">152 Allen St, New York, NY 10002, United States</span>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-icon">📞</span>
-                        <div>
-                            <strong>Phone:</strong><br>
-                            <a href="tel:+12127777718" style="color: var(--primary-gold); text-decoration: none;">+1 212-777-7718</a>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-icon">💳</span>
-                        <div>
-                            <strong>Payment:</strong><br>
-                            <span style="color: var(--gray-text);">Cash Only</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="info-card">
-                <h3>Opening Hours</h3>
-                <table class="hours-table">
-                    <tr>
-                        <td>Monday</td>
-                        <td>11:00 AM – 8:00 PM</td>
-                    </tr>
-                    <tr>
-                        <td>Tuesday</td>
-                        <td>11:00 AM – 8:00 PM</td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td>11:00 AM – 8:00 PM</td>
-                    </tr>
-                    <tr>
-                        <td>Thursday</td>
-                        <td>11:00 AM – 8:00 PM</td>
-                    </tr>
-                    <tr>
-                        <td>Friday</td>
-                        <td>11:00 AM – 8:00 PM</td>
-                    </tr>
-                    <tr>
-                        <td>Saturday</td>
-                        <td>11:00 AM – 8:00 PM</td>
-                    </tr>
-                    <tr>
-                        <td>Sunday</td>
-                        <td>11:00 AM – 8:00 PM</td>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="info-card">
-                <h3>Find Us</h3>
-                <div class="info-item">
-                    <span class="info-icon">🗺️</span>
-                    <div>
-                        <strong>Plus Code:</strong><br>
-                        <span style="color: var(--gray-text);">P2C6+77 New York, USA</span>
-                    </div>
-                </div>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.5!2d-73.991!3d40.721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598f27e64a3b%3A0x1234567890abcdef!2s152%20Allen%20St%2C%20New%20York%2C%20NY%2010002!5e0!3m2!1sen!2sus!4v1234567890"
-                    width="100%"
-                    height="250"
-                    style="border:0; border-radius: 10px; margin-top: 1rem;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="& Plus Salon Location">
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-logo">
-            <a href="#" class="logo" style="justify-content: center;">
-                <span class="logo-symbol">&</span>
-                <span class="logo-plus">+</span>
-                <span class="logo-text">Plus</span>
-            </a>
-        </div>
-        <div class="social-links">
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                📷
-            </a>
-            <a href="tel:+12127777718" aria-label="Call Us">
-                📞
-            </a>
-            <a href="https://maps.google.com/?q=152+Allen+St,+New+York,+NY+10002" target="_blank" rel="noopener noreferrer" aria-label="Get Directions">
-                🗺️
-            </a>
-        </div>
-        <p>&copy; 2024 & Plus Salon. All rights reserved.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem;">152 Allen St, New York, NY 10002 | (212) 777-7718</p>
-    </footer>
-
+    <div id="game-container"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.70.0/dist/phaser.min.js"></script>
     <script>
-        // Gallery Tab Functionality
-        function showGallery(tabName) {
-            // Hide all galleries
-            document.getElementById('gallery-inside').style.display = 'none';
-            document.getElementById('gallery-owner').style.display = 'none';
-            document.getElementById('gallery-all').style.display = 'none';
-
-            // Remove active class from all buttons
-            document.querySelectorAll('.tab-button').forEach(btn => {
-                btn.classList.remove('active');
-            });
-
-            // Show selected gallery
-            if (tabName === 'inside') {
-                document.getElementById('gallery-inside').style.display = 'grid';
-            } else if (tabName === 'owner') {
-                document.getElementById('gallery-owner').style.display = 'grid';
-            } else if (tabName === 'all') {
-                document.getElementById('gallery-all').style.display = 'grid';
-            }
-
-            // Add active class to clicked button
-            event.target.classList.add('active');
-        }
-
-        // Scroll Animation
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+        // ============================================
+        // إعدادات اللعبة الثابتة
+        // ============================================
+        const CONFIG = {
+            WIDTH: 600,
+            HEIGHT: 800,
+            GRID_COLS: 8,
+            GRID_ROWS: 10,
+            CELL_SIZE: 60,
+            GRID_OFFSET_X: 60,
+            GRID_OFFSET_Y: 100,
+            BASKET_Y: 720,
+            BASKET_WIDTH: 70,
+            BASKET_HEIGHT: 40,
+            GEM_COLORS: [0xff4444, 0x4444ff, 0x44ff44, 0xffff44, 0xff44ff],
+            NEW_ROW_INTERVAL: 8000,
+            SCORE_PER_GEM: 10
         };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+        CONFIG.GRID_WIDTH = CONFIG.GRID_COLS * CONFIG.CELL_SIZE;
+        CONFIG.GRID_HEIGHT = CONFIG.GRID_ROWS * CONFIG.CELL_SIZE;
+
+        // ============================================
+        // مشهد اللعبة الرئيسي
+        // ============================================
+        class GameScene extends Phaser.Scene {
+            constructor() {
+                super('GameScene');
+            }
+
+            init() {
+                this.grid = [];
+                this.score = 0;
+                this.basketState = 'EMPTY';
+                this.heldGemColor = null;
+                this.isInputLocked = false;
+                this.gameOver = false;
+                this.timeUntilNewRow = CONFIG.NEW_ROW_INTERVAL;
+                this.gems = this.add.group();
+                this.particles = this.add.group();
+            }
+
+            create() {
+                this.createBackground();
+                this.initializeGrid();
+                this.createBasket();
+                this.createUI();
+                this.setupInputs();
+                this.startNewRowTimer();
+                this.fillInitialGrid();
+            }
+
+            createBackground() {
+                const gradient = this.add.graphics();
+                gradient.fillGradientStyle(0x1a1a2e, 0x1a1a2e, 0x16213e, 0x16213e, 1);
+                gradient.fillRect(0, 0, CONFIG.WIDTH, CONFIG.HEIGHT);
+                
+                const gridFrame = this.add.graphics();
+                gridFrame.lineStyle(4, 0x4a90d9, 1);
+                gridFrame.strokeRoundedRect(
+                    CONFIG.GRID_OFFSET_X - 10,
+                    CONFIG.GRID_OFFSET_Y - 10,
+                    CONFIG.GRID_WIDTH + 20,
+                    CONFIG.GRID_HEIGHT + 20,
+                    10
+                );
+                
+                const gridLines = this.add.graphics();
+                gridLines.lineStyle(1, 0x4a90d9, 0.3);
+                
+                for (let i = 0; i <= CONFIG.GRID_COLS; i++) {
+                    const x = CONFIG.GRID_OFFSET_X + i * CONFIG.CELL_SIZE;
+                    gridLines.moveTo(x, CONFIG.GRID_OFFSET_Y);
+                    gridLines.lineTo(x, CONFIG.GRID_OFFSET_Y + CONFIG.GRID_HEIGHT);
                 }
-            });
-        }, observerOptions);
+                
+                for (let i = 0; i <= CONFIG.GRID_ROWS; i++) {
+                    const y = CONFIG.GRID_OFFSET_Y + i * CONFIG.CELL_SIZE;
+                    gridLines.moveTo(CONFIG.GRID_OFFSET_X, y);
+                    gridLines.lineTo(CONFIG.GRID_OFFSET_X + CONFIG.GRID_WIDTH, y);
+                }
+                
+                gridLines.strokePath();
+            }
 
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
+            initializeGrid() {
+                this.grid = [];
+                for (let row = 0; row < CONFIG.GRID_ROWS; row++) {
+                    this.grid[row] = [];
+                    for (let col = 0; col < CONFIG.GRID_COLS; col++) {
+                        this.grid[row][col] = 0;
+                    }
+                }
+            }
 
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+            createBasket() {
+                this.basket = this.add.graphics();
+                this.drawBasket(this.basket, CONFIG.WIDTH / 2, CONFIG.BASKET_Y);
+                
+                this.basketIndicator = this.add.text(
+                    CONFIG.WIDTH / 2,
+                    CONFIG.BASKET_Y + 50,
+                    '← → للتحرك | SPACE للسحب/الإطلاق',
+                    {
+                        fontSize: '16px',
+                        fill: '#ffffff',
+                        fontStyle: 'bold'
+                    }
+                ).setOrigin(0.5);
+            }
+
+            drawBasket(graphics, x, y) {
+                graphics.clear();
+                graphics.fillStyle(0x8b4513, 1);
+                graphics.fillRoundedRect(x - CONFIG.BASKET_WIDTH / 2, y - CONFIG.BASKET_HEIGHT / 2, CONFIG.BASKET_WIDTH, CONFIG.BASKET_HEIGHT, 8);
+                graphics.lineStyle(3, 0xcd853f, 1);
+                graphics.strokeRoundedRect(x - CONFIG.BASKET_WIDTH / 2, y - CONFIG.BASKET_HEIGHT / 2, CONFIG.BASKET_WIDTH, CONFIG.BASKET_HEIGHT, 8);
+                graphics.lineStyle(2, 0xa0522d, 0.5);
+                for (let i = 0; i < CONFIG.BASKET_WIDTH; i += 10) {
+                    graphics.moveTo(x - CONFIG.BASKET_WIDTH / 2 + i, y - CONFIG.BASKET_HEIGHT / 2 + 5);
+                    graphics.lineTo(x - CONFIG.BASKET_WIDTH / 2 + i, y + CONFIG.BASKET_HEIGHT / 2 - 5);
+                }
+                graphics.strokePath();
+            }
+
+            createUI() {
+                this.scoreText = this.add.text(
+                    CONFIG.WIDTH / 2,
+                    30,
+                    'المحفظة: 0',
+                    {
+                        fontSize: '28px',
+                        fill: '#ffd700',
+                        fontStyle: 'bold',
+                        stroke: '#000000',
+                        strokeThickness: 4
+                    }
+                ).setOrigin(0.5);
+                
+                this.timeBarBg = this.add.graphics();
+                this.timeBarBg.fillStyle(0x333333, 0.8);
+                this.timeBarBg.fillRoundedRect(CONFIG.WIDTH / 2 - 100, 60, 200, 15, 8);
+                
+                this.timeBar = this.add.graphics();
+                this.updateTimeBar();
+                
+                this.timeText = this.add.text(
+                    CONFIG.WIDTH / 2,
+                    68,
+                    'الصف الجديد خلال: 8.0ث',
+                    {
+                        fontSize: '14px',
+                        fill: '#ffffff',
+                        fontStyle: 'bold'
+                    }
+                ).setOrigin(0.5);
+            }
+
+            updateTimeBar() {
+                this.timeBar.clear();
+                const progress = this.timeUntilNewRow / CONFIG.NEW_ROW_INTERVAL;
+                const color = progress > 0.5 ? 0x44ff44 : progress > 0.25 ? 0xffff44 : 0xff4444;
+                this.timeBar.fillStyle(color, 1);
+                this.timeBar.fillRoundedRect(
+                    CONFIG.WIDTH / 2 - 100,
+                    60,
+                    200 * progress,
+                    15,
+                    8
+                );
+            }
+
+            setupInputs() {
+                this.cursors = this.input.keyboard.createCursorKeys();
+                this.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
+                this.keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
+                this.keySpace = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+                this.keyR = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.R);
+                
+                this.basketSpeed = 400;
+                this.basketX = CONFIG.WIDTH / 2;
+                
+                this.keySpace.on('down', () => this.handleSpacePress(), this);
+                
+                this.keyR.on('down', () => {
+                    if (this.gameOver) {
+                        this.scene.restart();
+                    }
+                });
+                
+                this.input.on('pointerdown', () => this.handleSpacePress());
+            }
+
+            update(time, delta) {
+                if (this.gameOver || this.isInputLocked) return;
+                
+                let moving = false;
+                
+                if (this.cursors.left.isDown || this.keyA.isDown) {
+                    this.basketX -= this.basketSpeed * (delta / 1000);
+                    moving = true;
+                }
+                
+                if (this.cursors.right.isDown || this.keyD.isDown) {
+                    this.basketX += this.basketSpeed * (delta / 1000);
+                    moving = true;
+                }
+                
+                const minX = CONFIG.GRID_OFFSET_X + CONFIG.BASKET_WIDTH / 2;
+                const maxX = CONFIG.GRID_OFFSET_X + CONFIG.GRID_WIDTH - CONFIG.BASKET_WIDTH / 2;
+                this.basketX = Phaser.Math.Clamp(this.basketX, minX, maxX);
+                
+                this.basket.setPosition(this.basketX, CONFIG.BASKET_Y);
+                this.basket.clear();
+                this.drawBasket(this.basket, this.basketX, CONFIG.BASKET_Y);
+                
+                if (this.basketState === 'HOLDING' && this.heldGemSprite) {
+                    this.heldGemSprite.setPosition(this.basketX, CONFIG.BASKET_Y - 30);
+                }
+                
+                if (this.basketState === 'EMPTY') {
+                    this.basketIndicator.setText('← → للتحرك | SPACE للسحب');
+                } else {
+                    this.basketIndicator.setText('← → للتحرك | SPACE للإطلاق');
+                }
+            }
+
+            handleSpacePress() {
+                if (this.gameOver || this.isInputLocked) return;
+                
+                const col = this.getBasketColumn();
+                
+                if (this.basketState === 'EMPTY') {
+                    this.pullGem(col);
+                } else {
+                    this.shootGem(col);
+                }
+            }
+
+            getBasketColumn() {
+                const relativeX = this.basketX - CONFIG.GRID_OFFSET_X;
+                const col = Math.floor(relativeX / CONFIG.CELL_SIZE);
+                return Phaser.Math.Clamp(col, 0, CONFIG.GRID_COLS - 1);
+            }
+
+            pullGem(col) {
+                let row = -1;
+                for (let r = CONFIG.GRID_ROWS - 1; r >= 0; r--) {
+                    if (this.grid[r][col] !== 0) {
+                        row = r;
+                        break;
+                    }
+                }
+                
+                if (row === -1) {
+                    this.shakeBasket();
+                    return;
+                }
+                
+                this.isInputLocked = true;
+                const color = this.grid[row][col];
+                this.grid[row][col] = 0;
+                
+                const gemSprite = this.getGemSprite(row, col);
+                if (gemSprite) {
+                    gemSprite.destroy();
+                }
+                
+                this.heldGemSprite = this.createGemSprite(this.basketX, CONFIG.BASKET_Y - 30, color);
+                this.basketState = 'HOLDING';
+                this.heldGemColor = color;
+                
+                setTimeout(() => {
+                    this.isInputLocked = false;
+                }, 300);
+            }
+
+            shootGem(col) {
+                let row = -1;
+                for (let r = 0; r < CONFIG.GRID_ROWS; r++) {
+                    if (this.grid[r][col] === 0) {
+                        row = r;
+                        break;
+                    }
+                }
+                
+                if (row === -1) {
+                    this.shakeBasket();
+                    return;
+                }
+                
+                this.isInputLocked = true;
+                const color = this.heldGemColor;
+                
+                if (this.heldGemSprite) {
+                    this.heldGemSprite.destroy();
+                    this.heldGemSprite = null;
+                }
+                
+                this.basketState = 'EMPTY';
+                this.heldGemColor = null;
+                this.grid[row][col] = color;
+                
+                const targetX = CONFIG.GRID_OFFSET_X + col * CONFIG.CELL_SIZE + CONFIG.CELL_SIZE / 2;
+                const targetY = CONFIG.GRID_OFFSET_Y + row * CONFIG.CELL_SIZE + CONFIG.CELL_SIZE / 2;
+                
+                const gemSprite = this.createGemSprite(this.basketX, CONFIG.BASKET_Y - 30, color);
+                
+                this.tweens.add({
+                    targets: gemSprite,
+                    x: targetX,
+                    y: targetY,
+                    duration: 500,
+                    ease: 'Power2',
+                    onComplete: () => {
+                        this.checkMatches(row, col, color);
+                    }
+                });
+            }
+
+            createGemSprite(x, y, color) {
+                const texture = this.makeRenderTexture(CONFIG.CELL_SIZE, CONFIG.CELL_SIZE);
+                const graphics = this.add.graphics();
+                this.drawGem(graphics, CONFIG.CELL_SIZE / 2, CONFIG.CELL_SIZE / 2, CONFIG.CELL_SIZE * 0.8, color);
+                texture.draw(graphics);
+                texture.refresh();
+                graphics.destroy();
+                
+                const sprite = this.add.image(x, y, texture);
+                return sprite;
+            }
+
+            drawGem(graphics, x, y, size, color) {
+                const halfSize = size / 2;
+                
+                graphics.fillStyle(0x000000, 0.3);
+                graphics.fillCircle(x + 2, y + 2, halfSize);
+                
+                graphics.fillStyle(color, 1);
+                graphics.fillCircle(x, y, halfSize);
+                
+                graphics.fillStyle(0xffffff, 0.6);
+                graphics.fillCircle(x - halfSize * 0.3, y - halfSize * 0.3, halfSize * 0.3);
+                
+                graphics.lineStyle(2, Phaser.Display.Color.GetColorRGB(color), 0.8);
+                graphics.strokeCircle(x, y, halfSize);
+            }
+
+            getGemSprite(row, col) {
+                const x = CONFIG.GRID_OFFSET_X + col * CONFIG.CELL_SIZE + CONFIG.CELL_SIZE / 2;
+                const y = CONFIG.GRID_OFFSET_Y + row * CONFIG.CELL_SIZE + CONFIG.CELL_SIZE / 2;
+                
+                const children = this.children.list;
+                for (let child of children) {
+                    if (child instanceof Phaser.GameObjects.Image) {
+                        const dx = Math.abs(child.x - x);
+                        const dy = Math.abs(child.y - y);
+                        if (dx < 5 && dy < 5) {
+                            return child;
+                        }
+                    }
+                }
+                return null;
+            }
+
+            checkMatches(row, col, color) {
+                const matches = this.findMatches(row, col, color);
+                
+                if (matches.length >= 3) {
+                    this.destroyMatches(matches);
+                } else {
+                    this.isInputLocked = false;
+                }
+            }
+
+            findMatches(row, col, color) {
+                const matches = new Set();
+                matches.add(`${row},${col}`);
+                
+                let left = col - 1;
+                while (left >= 0 && this.grid[row][left] === color) {
+                    matches.add(`${row},${left}`);
+                    left--;
+                }
+                
+                let right = col + 1;
+                while (right < CONFIG.GRID_COLS && this.grid[row][right] === color) {
+                    matches.add(`${row},${right}`);
+                    right++;
+                }
+                
+                let up = row - 1;
+                while (up >= 0 && this.grid[up][col] === color) {
+                    matches.add(`${up},${col}`);
+                    up--;
+                }
+                
+                let down = row + 1;
+                while (down < CONFIG.GRID_ROWS && this.grid[down][col] === color) {
+                    matches.add(`${down},${col}`);
+                    down++;
+                }
+                
+                return Array.from(matches).map(str => {
+                    const [r, c] = str.split(',').map(Number);
+                    return { row: r, col: c };
+                });
+            }
+
+            destroyMatches(matches) {
+                this.isInputLocked = true;
+                
+                const points = matches.length * CONFIG.SCORE_PER_GEM;
+                this.score += points;
+                this.scoreText.setText(`المحفظة: ${this.score}`);
+                
+                matches.forEach(({ row, col }) => {
+                    const gemSprite = this.getGemSprite(row, col);
+                    if (gemSprite) {
+                        this.tweens.add({
+                            targets: gemSprite,
+                            scaleX: 0,
+                            scaleY: 0,
+                            alpha: 0,
+                            duration: 300,
+                            ease: 'Back.in',
+                            onComplete: () => {
+                                gemSprite.destroy();
+                            }
+                        });
+                        
+                        this.createExplosion(
+                            CONFIG.GRID_OFFSET_X + col * CONFIG.CELL_SIZE + CONFIG.CELL_SIZE / 2,
+                            CONFIG.GRID_OFFSET_Y + row * CONFIG.CELL_SIZE + CONFIG.CELL_SIZE / 2,
+                            this.grid[row][col]
+                        );
+                    }
+                    
+                    this.grid[row][col] = 0;
+                });
+                
+                setTimeout(() => {
+                    this.applyGravity();
+                }, 400);
+            }
+
+            applyGravity() {
+                for (let col = 0; col < CONFIG.GRID_COLS; col++) {
+                    const gems = [];
+                    for (let row = 0; row < CONFIG.GRID_ROWS; row++) {
+                        if (this.grid[row][col] !== 0) {
+                            gems.push({ row, color: this.grid[row][col], col });
+                            this.grid[row][col] = 0;
+                        }
+                    }
+                    
+                    for (let i = 0; i < gems.length; i++) {
+                        const newRow = CONFIG.GRID_ROWS - gems.length + i;
+                        this.grid[newRow][gems[i].col] = gems[i].color;
+                        
+                        const gemSprite = this.getGemSprite(gems[i].row, gems[i].col);
+                        if (gemSprite) {
+                            const targetY = CONFIG.GRID_OFFSET_Y + newRow * CONFIG.CELL_SIZE + CONFIG.CELL_SIZE / 2;
+                            this.tweens.add({
+                                targets: gemSprite,
+                                y: targetY,
+                                duration: 300,
+                                ease: 'Bounce.out'
+                            });
+                        }
+                    }
+                }
+                
+                setTimeout(() => {
+                    this.checkChainMatches();
+                }, 400);
+            }
+
+            checkChainMatches() {
+                let hasMatches = false;
+                const allMatches = [];
+                
+                for (let row = 0; row < CONFIG.GRID_ROWS; row++) {
+                    for (let col = 0; col < CONFIG.GRID_COLS; col++) {
+                        if (this.grid[row][col] !== 0) {
+                            const matches = this.findMatches(row, col, this.grid[row][col]);
+                            if (matches.length >= 3) {
+                                hasMatches = true;
+                                matches.forEach(m => {
+                                    allMatches.push(`${m.row},${m.col}`);
+                                });
+                            }
+                        }
+                    }
+                }
+                
+                if (hasMatches) {
+                    const uniqueMatches = [...new Set(allMatches)].map(str => {
+                        const [r, c] = str.split(',').map(Number);
+                        return { row: r, col: c };
+                    });
+                    
+                    this.destroyMatches(uniqueMatches);
+                } else {
+                    this.isInputLocked = false;
+                }
+            }
+
+            createExplosion(x, y, color) {
+                const particleKey = 'particle_' + color + '_' + Date.now();
+                const graphics = this.make.graphics();
+                graphics.fillStyle(color, 1);
+                graphics.fillCircle(5, 5, 5);
+                graphics.generateTexture(particleKey, 10, 10);
+                graphics.destroy();
+                
+                const particles = this.add.particles(x, y, particleKey, {
+                    speed: { min: 50, max: 150 },
+                    angle: { min: 0, max: 360 },
+                    scale: { start: 0.5, end: 0 },
+                    lifespan: 500,
+                    quantity: 10,
+                    blendMode: 'ADD'
+                });
+                
+                setTimeout(() => {
+                    particles.destroy();
+                    if (this.textures.exists(particleKey)) {
+                        this.textures.remove(particleKey);
+                    }
+                }, 500);
+            }
+
+            shakeBasket() {
+                this.tweens.add({
+                    targets: this.basket,
+                    x: this.basketX + 10,
+                    duration: 50,
+                    yoyo: true,
+                    repeat: 3
+                });
+            }
+
+            startNewRowTimer() {
+                this.newRowEvent = this.time.addEvent({
+                    delay: 100,
+                    callback: this.updateNewRowTimer,
+                    callbackScope: this,
+                    loop: true
+                });
+            }
+
+            updateNewRowTimer() {
+                if (this.gameOver || this.isInputLocked) return;
+                
+                this.timeUntilNewRow -= 100;
+                
+                if (this.timeUntilNewRow <= 0) {
+                    this.addNewRow();
+                    this.timeUntilNewRow = CONFIG.NEW_ROW_INTERVAL;
+                }
+                
+                this.updateTimeBar();
+                this.timeText.setText(`الصف الجديد خلال: ${(this.timeUntilNewRow / 1000).toFixed(1)}ث`);
+            }
+
+            addNewRow() {
+                this.isInputLocked = true;
+                
+                for (let col = 0; col < CONFIG.GRID_COLS; col++) {
+                    if (this.grid[CONFIG.GRID_ROWS - 1][col] !== 0) {
+                        this.triggerGameOver();
+                        return;
+                    }
+                }
+                
+                const newRow = this.generateSafeRow();
+                
+                for (let row = CONFIG.GRID_ROWS - 1; row > 0; row--) {
+                    for (let col = 0; col < CONFIG.GRID_COLS; col++) {
+                        this.grid[row][col] = this.grid[row - 1][col];
+                        
+                        const gemSprite = this.getGemSprite(row - 1, col);
+                        if (gemSprite) {
+                            const targetY = CONFIG.GRID_OFFSET_Y + row * CONFIG.CELL_SIZE + CONFIG.CELL_SIZE / 2;
+                            this.tweens.add({
+                                targets: gemSprite,
+                                y: targetY,
+                                duration: 500,
+                                ease: 'Power2'
+                            });
+                        }
+                    }
+                }
+                
+                for (let col = 0; col < CONFIG.GRID_COLS; col++) {
+                    this.grid[0][col] = newRow[col];
+                    
+                    const x = CONFIG.GRID_OFFSET_X + col * CONFIG.CELL_SIZE + CONFIG.CELL_SIZE / 2;
+                    const y = CONFIG.GRID_OFFSET_Y - CONFIG.CELL_SIZE + CONFIG.CELL_SIZE / 2;
+                    const gemSprite = this.createGemSprite(x, y, newRow[col]);
+                    
+                    this.tweens.add({
+                        targets: gemSprite,
+                        y: CONFIG.GRID_OFFSET_Y + CONFIG.CELL_SIZE / 2,
+                        duration: 500,
+                        ease: 'Power2',
+                        onComplete: () => {
+                            this.checkMatches(0, col, newRow[col]);
+                        }
                     });
                 }
-            });
-        });
-
-        // Navbar background on scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.background = 'rgba(26, 26, 46, 0.98)';
-            } else {
-                nav.style.background = 'rgba(26, 26, 46, 0.95)';
+                
+                setTimeout(() => {
+                    this.isInputLocked = false;
+                }, 600);
             }
-        });
+
+            generateSafeRow() {
+                const row = [];
+                
+                for (let col = 0; col < CONFIG.GRID_COLS; col++) {
+                    let color;
+                    let attempts = 0;
+                    
+                    do {
+                        color = Phaser.Math.Between(1, 5);
+                        attempts++;
+                        
+                        if (col >= 2 && row[col - 1] === color && row[col - 2] === color) {
+                            continue;
+                        }
+                        
+                        break;
+                    } while (attempts < 10);
+                    
+                    row[col] = color;
+                }
+                
+                return row;
+            }
+
+            fillInitialGrid() {
+                this.isInputLocked = true;
+                
+                for (let row = 0; row < CONFIG.GRID_ROWS / 2; row++) {
+                    for (let col = 0; col < CONFIG.GRID_COLS; col++) {
+                        const color = Phaser.Math.Between(1, 5);
+                        this.grid[row][col] = color;
+                        
+                        const x = CONFIG.GRID_OFFSET_X + col * CONFIG.CELL_SIZE + CONFIG.CELL_SIZE / 2;
+                        const y = CONFIG.GRID_OFFSET_Y + row * CONFIG.CELL_SIZE + CONFIG.CELL_SIZE / 2;
+                        
+                        this.createGemSprite(x, y, color);
+                    }
+                }
+                
+                setTimeout(() => {
+                    this.isInputLocked = false;
+                }, 500);
+            }
+
+            triggerGameOver() {
+                this.gameOver = true;
+                this.newRowEvent.remove();
+                
+                const overlay = this.add.rectangle(0, 0, CONFIG.WIDTH, CONFIG.HEIGHT, 0x000000, 0.8);
+                overlay.setOrigin(0);
+                
+                this.add.text(
+                    CONFIG.WIDTH / 2,
+                    CONFIG.HEIGHT / 2 - 50,
+                    'انتهت اللعبة!',
+                    {
+                        fontSize: '48px',
+                        fill: '#ff4444',
+                        fontStyle: 'bold',
+                        stroke: '#ffffff',
+                        strokeThickness: 6
+                    }
+                ).setOrigin(0.5);
+                
+                this.add.text(
+                    CONFIG.WIDTH / 2,
+                    CONFIG.HEIGHT / 2 + 20,
+                    `النقاط النهائية: ${this.score}`,
+                    {
+                        fontSize: '32px',
+                        fill: '#ffd700',
+                        fontStyle: 'bold'
+                    }
+                ).setOrigin(0.5);
+                
+                const restartBtn = this.add.text(
+                    CONFIG.WIDTH / 2,
+                    CONFIG.HEIGHT / 2 + 100,
+                    'اضغط R لإعادة اللعب',
+                    {
+                        fontSize: '24px',
+                        fill: '#ffffff',
+                        fontStyle: 'bold',
+                        backgroundColor: '#4a90d9',
+                        padding: { x: 20, y: 10 }
+                    }
+                ).setOrigin(0.5);
+                
+                this.tweens.add({
+                    targets: restartBtn,
+                    scaleX: 1.1,
+                    scaleY: 1.1,
+                    duration: 500,
+                    yoyo: true,
+                    repeat: -1
+                });
+            }
+        }
+
+        const config = {
+            type: Phaser.AUTO,
+            width: CONFIG.WIDTH,
+            height: CONFIG.HEIGHT,
+            parent: 'game-container',
+            backgroundColor: '#1a1a2e',
+            scene: GameScene,
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    gravity: { y: 0 },
+                    debug: false
+                }
+            }
+        };
+
+        const game = new Phaser.Game(config);
     </script>
 </body>
 </html>
